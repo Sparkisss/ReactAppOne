@@ -18,6 +18,7 @@ class EmployeesAddForm extends Component {
 
     render () {
         const {name, salary} = this.state
+        const {onAddEnployee} = this.props
         return (
             <div className="app-add-form">
                 <h3>Добавьте нового сотрудника</h3>
@@ -36,8 +37,9 @@ class EmployeesAddForm extends Component {
                         value={salary}
                         onChange={this.onValueChange}/>
     
-                    <button type="submit"
-                            className="btn btn-outline-light">Добавить</button>
+                    <button type="button"
+                            className="btn btn-outline-light" onClick={() => onAddEnployee(name ,salary)}>Добавить
+                    </button>
                 </form>
             </div>
         )
