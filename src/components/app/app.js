@@ -6,7 +6,7 @@ import AppFilter from '../app-filter/app-filter'
 import EmployeesList from '../employees-list/employees-list'
 import EmployeesAddForm from '../employees-add-form/employees-add-form'
 
-import './app.css'
+import './app.scss'
 
 class WhoIsIt extends Component{
     constructor(props) {
@@ -132,8 +132,7 @@ class App extends Component {
 
         return (
             <div className="app">
-                <AppInfo employees={employees} increased={increased}/>
-    
+                <AppInfo employees={employees} increased={increased}/>    
                 <div className="search-panel">
                     <SearchPanel onUpdateSearch={this.onUpdateSearch}/>
                     <AppFilter filter={filter} onFilterSelect={this.onFilterSelect}/>
@@ -141,8 +140,7 @@ class App extends Component {
                 <EmployeesList 
                 data={visibleData}
                 onDelete={this.deleteItem}
-                onToggleProp={this.onToggleProp}
-                />
+                onToggleProp={this.onToggleProp}/>
                 <EmployeesAddForm
                 onAddEnployee={this.addItem}/>
                 <WhoIsIt name='True' surname="Man" link="google.com"/>
